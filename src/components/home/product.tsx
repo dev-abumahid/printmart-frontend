@@ -21,7 +21,7 @@ export default function Product() {
   return (
     <section
       aria-labelledby="curated-essentials-heading"
-      className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
+      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
     >
       {/* Section Header & Category Filter Tabs */}
       <motion.div
@@ -42,7 +42,7 @@ export default function Product() {
 
           <h2
             id="curated-essentials-heading"
-            className="text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-[56px] tracking-tight"
+            className="text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-14 tracking-tight"
           >
             Made for Your Next Big
             <br className="hidden sm:inline" /> Idea

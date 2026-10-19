@@ -83,7 +83,7 @@ export const Footer = () => {
                 className="h-auto w-48 object-contain sm:w-52"
               />
             </Link>
-            <p className="mt-4 max-w-[300px] text-[14px] leading-6 text-white/80 xl:text-[15px]">
+            <p className="mt-4 max-w-75 text-[14px] leading-6 text-white/80 xl:text-[15px]">
               Your Ideas. A Brighter World.
             </p>
           </div>
@@ -114,13 +114,13 @@ export const Footer = () => {
             <h3 className="text-[14px] font-semibold text-white xl:text-[15px]">
               Stay in Touch
             </h3>
-            <p className="mt-2 max-w-[330px] text-[12px] leading-5 text-white/70 xl:text-[13px]">
+            <p className="mt-2 max-w-82.5 text-[12px] leading-5 text-white/70 xl:text-[13px]">
               Subscribe for updates, offers and inspiration.
             </p>
 
             <form
               onSubmit={handleSubscribe}
-              className="mt-4 flex max-w-[360px] overflow-hidden rounded-xl border border-white/20 bg-white"
+              className="mt-4 flex max-w-90 overflow-hidden rounded-xl border border-white/20 bg-white"
             >
               <input
                 type="email"

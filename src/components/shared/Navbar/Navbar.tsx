@@ -51,10 +51,10 @@ export const Navbar = () => {
 
   return (
     <>
-      <header className="relative z-[70] w-full overflow-visible bg-white text-[#0b2b4c] shadow-[0_1px_0_rgba(21,47,73,0.08)]">
+      <header className="relative z-70 w-full overflow-visible bg-white text-[#0b2b4c] shadow-[0_1px_0_rgba(21,47,73,0.08)]">
         {/* PROMO BAR */}
         <div className="bg-[#0b2949] text-white">
-          <div className="mx-auto flex h-9 w-full max-w-[1440px] items-center justify-between px-4 text-[10px] sm:px-6 sm:text-[11px] lg:px-8">
+          <div className="mx-auto flex h-9 w-full max-w-360 items-center justify-between px-4 text-[10px] sm:px-6 sm:text-[11px] lg:px-8">
             <Link
               to="/products"
               className="truncate font-semibold tracking-[0.01em] transition-colors hover:text-[#79d9d3]"
@@ -84,14 +84,14 @@ export const Navbar = () => {
 
         {/* MAIN HEADER */}
         <div className="border-b border-[#e4eaf0] bg-white">
-          <div className="mx-auto flex h-[82px] w-full max-w-[1440px] items-center gap-5 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex h-20.5 w-full max-w-360 items-center gap-5 px-4 sm:px-6 lg:px-8">
             <Link to="/" className="shrink-0">
               <img
                 src={logoImg}
                 alt="Pryntmart"
                 width={180}
                 height={54}
-                className="h-auto w-[132px] object-contain sm:w-[150px]"
+                className="h-auto w-33 object-contain sm:w-37.5"
               />
             </Link>
 
@@ -199,7 +199,7 @@ export const Navbar = () => {
 
         {/* CATEGORY NAV */}
         <div className="hidden border-b border-[#e4eaf0] bg-white xl:block">
-          <div className="mx-auto flex h-[58px] w-full max-w-[1440px] items-stretch px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex h-14.5 w-full max-w-360 items-stretch px-4 sm:px-6 lg:px-8">
             <nav className="flex min-w-0 flex-1 items-stretch justify-between">
               {navItems.map((item) => {
                 const isActive = activeMenu === item.label;
@@ -224,7 +224,7 @@ export const Navbar = () => {
                         className={`transition-transform duration-200 ${isActive ? "rotate-180" : ""}`}
                       />
                       <span
-                        className={`absolute bottom-0 left-2 right-2 h-[2px] bg-[#bd2d63] transition-transform duration-200 ${
+                        className={`absolute bottom-0 left-2 right-2 h-0.5 bg-[#bd2d63] transition-transform duration-200 ${
                           isActive ? "scale-x-100" : "scale-x-0"
                         }`}
                       />
@@ -240,7 +240,7 @@ export const Navbar = () => {
               className="ml-4 flex shrink-0 items-center gap-2 border-l border-[#e4eaf0] px-5 text-[13px] font-semibold text-[#173653] transition-colors hover:text-[#bd2d63]"
             >
               Deals
-              <span className="h-4 w-4 rounded-full bg-gradient-to-br from-[#ff6b78] to-[#d9233f] shadow-[0_3px_8px_rgba(217,35,63,0.25)]" />
+              <span className="h-4 w-4 rounded-full bg-linear-to-br from-[#ff6b78] to-[#d9233f] shadow-[0_3px_8px_rgba(217,35,63,0.25)]" />
             </Link>
           </div>
         </div>
@@ -248,12 +248,12 @@ export const Navbar = () => {
         {/* MEGA PANEL */}
         {activeNav ? (
           <div
-            className="absolute left-0 right-0 top-full z-[80] hidden xl:block"
+            className="absolute left-0 right-0 top-full z-80 hidden xl:block"
             onMouseEnter={() => setActiveMenu(activeNav.label)}
             onMouseLeave={() => setActiveMenu(null)}
           >
             <div className="border-t border-white/[0.07] bg-[#081f38] text-white shadow-[0_28px_70px_rgba(4,21,38,0.34)]">
-              <div className="mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_310px] gap-8 px-8 py-8 2xl:gap-12">
+              <div className="mx-auto grid w-full max-w-360 grid-cols-[minmax(0,1fr)_310px] gap-8 px-8 py-8 2xl:gap-12">
                 <div className="grid min-w-0 grid-cols-3 gap-x-8 gap-y-7">
                   {activeNav.groups.map((group) => (
                     <div
@@ -282,7 +282,7 @@ export const Navbar = () => {
                 <Link
                   to={activeNav.featured.href}
                   onClick={() => setActiveMenu(null)}
-                  className="group relative self-stretch overflow-hidden rounded-[22px] border border-white/[0.09] bg-[linear-gradient(145deg,#153c5d_0%,#0c2a47_58%,#112943_100%)] p-6 shadow-[0_20px_45px_rgba(0,0,0,0.14)]"
+                  className="group relative self-stretch overflow-hidden rounded-[22px] border border-white/9 bg-[linear-gradient(145deg,#153c5d_0%,#0c2a47_58%,#112943_100%)] p-6 shadow-[0_20px_45px_rgba(0,0,0,0.14)]"
                 >
                   <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-[#55c2bb]/20 blur-3xl" />
                   <div className="pointer-events-none absolute -bottom-14 -left-10 h-36 w-36 rounded-full bg-[#bd2d63]/20 blur-3xl" />
@@ -292,11 +292,11 @@ export const Navbar = () => {
                       <Sparkles size={10} /> {activeNav.featured.eyebrow}
                     </p>
 
-                    <h3 className="mt-5 max-w-[250px] text-[21px] font-semibold leading-[1.28] tracking-[-0.025em] text-white">
+                    <h3 className="mt-5 max-w-62.5 text-[21px] font-semibold leading-[1.28] tracking-tight text-white">
                       {activeNav.featured.title}
                     </h3>
 
-                    <p className="mt-3 max-w-[250px] text-[12px] leading-5 text-white/52">
+                    <p className="mt-3 max-w-62.5 text-[12px] leading-5 text-white/52">
                       {activeNav.featured.description}
                     </p>
 
@@ -314,7 +314,7 @@ export const Navbar = () => {
       {/* MOBILE DRAWER */}
       <div
         onClick={() => setMobileOpen(false)}
-        className={`fixed inset-0 z-[90] bg-[#07192b]/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-90 bg-[#07192b]/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           mobileOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -322,7 +322,7 @@ export const Navbar = () => {
       />
 
       <aside
-        className={`fixed right-0 top-0 z-[100] h-dvh w-[88%] max-w-[390px] overflow-y-auto bg-white shadow-[-20px_0_60px_rgba(8,27,49,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden ${
+        className={`fixed right-0 top-0 z-100 h-dvh w-[88%] max-w-97.5 overflow-y-auto bg-white shadow-[-20px_0_60px_rgba(8,27,49,0.18)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -332,7 +332,7 @@ export const Navbar = () => {
             alt="Pryntmart"
             width={130}
             height={40}
-            className="h-auto w-[125px]"
+            className="h-auto w-31.25"
           />
           <button
             type="button"

@@ -81,7 +81,7 @@ export default function ReviewRatings() {
   return (
     <section
       aria-labelledby="community-showcase-heading"
-      className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-12 sm:gap-16 select-none"
+      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-12 sm:gap-16 select-none"
     >
       {/* Section Header */}
       <motion.div
@@ -102,7 +102,7 @@ export default function ReviewRatings() {
 
           <h2
             id="community-showcase-heading"
-            className="text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-[56px] tracking-tight"
+            className="text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-14 tracking-tight"
           >
             Made by People Like You
           </h2>

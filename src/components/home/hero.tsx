@@ -72,13 +72,13 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full max-w-[1440px] mx-auto px-5 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16 pb-16 sm:pb-20 lg:pb-28 overflow-hidden select-none"
+      className="relative w-full max-w-360 mx-auto px-5 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16 pb-16 sm:pb-20 lg:pb-28 overflow-hidden select-none"
       aria-label="Hero - Print Your Imagination"
     >
       {/* Ambient Gradient Glow (Optimized for both Light & Dark modes) */}
       <div
         ref={bgGlowRef}
-        className="w-[600px] sm:w-[750px] lg:w-[920px] h-[380px] sm:h-[480px] lg:h-[560px] right-[-120px] sm:right-[-60px] lg:left-[220px] top-[30px] lg:top-[48px] absolute bg-gradient-to-tr from-indigo-600/10 via-orange-200/25 to-transparent dark:from-indigo-500/20 dark:via-orange-500/15 dark:to-transparent rounded-full blur-[48px] lg:blur-[64px] pointer-events-none -z-10"
+        className="w-150 sm:w-187.5 lg:w-230 h-95 sm:h-120 lg:h-140 -right-30 sm:-right-15 lg:left-55 top-7.5 lg:top-12 absolute bg-linear-to-tr from-indigo-600/10 via-orange-200/25 to-transparent dark:from-indigo-500/20 dark:via-orange-500/15 dark:to-transparent rounded-full blur-[48px] lg:blur-3xl pointer-events-none -z-10"
         aria-hidden="true"
       />
 
@@ -96,7 +96,7 @@ export default function Hero() {
 
           {/* Main Headline */}
           <div className="pt-5 sm:pt-6">
-            <h1 className="text-gray-900 dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-extrabold font-jakarta leading-[1.12] sm:leading-[1.15] lg:leading-[80px] tracking-tight">
+            <h1 className="text-gray-900 dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-extrabold font-jakarta leading-[1.12] sm:leading-[1.15] lg:leading-20 tracking-tight">
               <span className="block">Your Ideas.</span>
               <span className="inline-block relative">
                 <span className="text-indigo-500 dark:text-indigo-400">Beautifully</span>
@@ -122,7 +122,7 @@ export default function Hero() {
           </div>
 
           {/* Subtitle / Description */}
-          <div className="pt-5 sm:pt-6 max-w-[576px]">
+          <div className="pt-5 sm:pt-6 max-w-xl">
             <p className="text-gray-600 dark:text-zinc-400 text-base sm:text-lg font-normal font-inter leading-relaxed sm:leading-7">
               Create custom products that bring your ideas to life. From business
               essentials to personalized gifts, make every detail yours with
@@ -178,11 +178,11 @@ export default function Hero() {
         {/* Right Composition: Floating Cards Stage */}
         <div className="lg:col-span-6 xl:col-span-6 w-full flex justify-center items-center py-4 lg:py-0 overflow-visible">
           {/* Responsive Viewport Wrapper */}
-          <div className="relative w-[340px] h-[370px] sm:w-[460px] sm:h-[480px] md:w-[540px] md:h-[550px] lg:w-[520px] lg:h-[540px] xl:w-[590px] xl:h-[560px]">
+          <div className="relative w-85 h-92.5 sm:w-115 sm:h-120 md:w-135 md:h-137.5 lg:w-130 lg:h-135 xl:w-147.5 xl:h-140">
             {/* Scaled Stage preserving exact Figma proportions and pixel placements */}
             <div
               ref={cardsStageRef}
-              className="absolute top-0 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 w-[585px] h-[540px] origin-top lg:origin-top-right xl:origin-center scale-[0.56] sm:scale-[0.76] md:scale-[0.88] lg:scale-[0.86] xl:scale-100"
+              className="absolute top-0 left-1/2 -translate-x-1/2 lg:left-auto lg:right-0 lg:translate-x-0 w-146.25 h-135 origin-top lg:origin-top-right xl:origin-center scale-[0.56] sm:scale-[0.76] md:scale-[0.88] lg:scale-[0.86] xl:scale-100"
             >
               {/* 1. Gold Foil Card (Top Left) */}
               <div
@@ -297,7 +297,7 @@ export default function Hero() {
               {/* 4. Packaging Card (Bottom Right) */}
               <div
                 ref={cardPackRef}
-                className="w-[245px] h-44 p-2.5 left-[315.46px] top-[393.03px] absolute origin-top-left -rotate-6 z-20 transform-gpu will-change-transform"
+                className="w-61.25 h-44 p-2.5 left-[315.46px] top-[393.03px] absolute origin-top-left -rotate-6 z-20 transform-gpu will-change-transform"
               >
                 <motion.div
                   animate={
@@ -337,7 +337,7 @@ export default function Hero() {
               {/* 5. 48h Dispatch Ready Floating Pill Badge */}
               <div
                 ref={badgeDispatchRef}
-                className="h-7 px-3 py-1.5 left-[-16px] top-[255px] absolute z-25 transform-gpu will-change-transform"
+                className="h-7 px-3 py-1.5 -left-4 top-63.75 absolute z-25 transform-gpu will-change-transform"
               >
                 <motion.div
                   animate={
@@ -361,7 +361,7 @@ export default function Hero() {
               {/* 6. Custom Stickers Floating Badge Card */}
               <div
                 ref={badgeStickersRef}
-                className="left-[16px] top-[438px] absolute z-25 transform-gpu will-change-transform"
+                className="left-4 top-109.5 absolute z-25 transform-gpu will-change-transform"
               >
                 <motion.div
                   animate={
@@ -375,7 +375,7 @@ export default function Hero() {
                   whileHover={prefersReduced ? undefined : { scale: 1.04, y: -2, transition: { duration: 0.2 } }}
                   className="p-3 bg-white dark:bg-zinc-900/95 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-[0px_16px_32px_-8px_rgba(0,0,0,0.14)] dark:shadow-[0px_16px_32px_-8px_rgba(0,0,0,0.6)] inline-flex justify-start items-center gap-3 backdrop-blur-xs cursor-pointer group"
                 >
-                  <div className="size-11 bg-gradient-to-br from-pink-400 via-indigo-300 to-amber-200 dark:from-pink-500 dark:via-indigo-500 dark:to-amber-300 rounded-xl shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.05)] flex justify-center items-center transition-transform duration-300 group-hover:rotate-6">
+                  <div className="size-11 bg-linear-to-br from-pink-400 via-indigo-300 to-amber-200 dark:from-pink-500 dark:via-indigo-500 dark:to-amber-300 rounded-xl shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.05)] flex justify-center items-center transition-transform duration-300 group-hover:rotate-6">
                     <Sparkles className="size-5 text-white" />
                   </div>
                   <div className="flex flex-col justify-start items-start">

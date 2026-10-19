@@ -45,7 +45,7 @@ function VisionCard({ item, index }: VisionCardProps) {
       </h3>
 
       {/* Commitment Description */}
-      <p className="max-w-[260px] text-xs font-normal leading-5 text-gray-600 dark:text-zinc-400 font-inter">
+      <p className="max-w-65 text-xs font-normal leading-5 text-gray-600 dark:text-zinc-400 font-inter">
         {item.desc}
       </p>
     </motion.article>
@@ -58,7 +58,7 @@ export default function Vision() {
   return (
     <section
       aria-labelledby="vision-heading"
-      className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 select-none"
+      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 select-none"
     >
       {/* Outer White Card Container */}
       <motion.div
@@ -72,7 +72,7 @@ export default function Vision() {
         <div className="w-full max-w-xl flex flex-col justify-start items-center gap-2 text-center">
           <h2
             id="vision-heading"
-            className="text-center text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-[56px] tracking-tight"
+            className="text-center text-gray-900 dark:text-zinc-50 text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-14 tracking-tight"
           >
             Beautifully Made.
             <br className="hidden sm:inline" /> Thoughtfully Delivered.

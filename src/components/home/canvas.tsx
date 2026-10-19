@@ -55,7 +55,7 @@ export default function Canvase() {
   return (
     <section
       aria-labelledby="interactive-studio-heading"
-      className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 select-none"
+      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 select-none"
     >
       {/* Outer Dark Hero Card */}
       <motion.div
@@ -84,7 +84,7 @@ export default function Canvase() {
 
             <h2
               id="interactive-studio-heading"
-              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-[56px] tracking-tight"
+              className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold font-jakarta leading-tight sm:leading-[1.15] lg:leading-14 tracking-tight"
             >
               Your Creativity. Our Canvas.
             </h2>
@@ -164,7 +164,7 @@ export default function Canvase() {
           </div>
 
           {/* Studio Workspace Content (3 Column Grid) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 w-full min-h-[480px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 w-full min-h-120">
             {/* Left Toolbar */}
             <div className="lg:col-span-3 p-4 bg-white border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col justify-between gap-6">
               <div className="flex flex-col gap-1">
@@ -215,7 +215,7 @@ export default function Canvase() {
             </div>
 
             {/* Center 3D Interactive Viewport */}
-            <div className="lg:col-span-6 relative p-6 bg-violet-50 flex items-center justify-center min-h-[420px] overflow-hidden">
+            <div className="lg:col-span-6 relative p-6 bg-violet-50 flex items-center justify-center min-h-105 overflow-hidden">
               {/* Top View Toggle Controls */}
               <div className="absolute top-4 left-4 flex items-center gap-1.5 z-20">
                 <div className="px-2.5 py-1 bg-white rounded-md shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] border border-gray-100 flex items-center gap-1.5">
