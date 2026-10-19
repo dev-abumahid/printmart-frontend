@@ -6,6 +6,7 @@ import LittleThings from "@/components/home/little-things";
 import Product from "@/components/home/product";
 import ReviewRatings from "@/components/home/review-ratings";
 import TrustedBrands from "@/components/home/trusted-brands";
+import VideoShowcase from "@/components/home/video-showcase";
 import Vision from "@/components/home/vision";
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       {/* <CustomizeStep /> */}
       <LittleThings />
       <Canvase />
+      <VideoShowcase/>
       <ReviewRatings />
       <Vision />
       <Cta />

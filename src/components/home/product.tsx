@@ -21,7 +21,7 @@ export default function Product() {
   return (
     <section
       aria-labelledby="curated-essentials-heading"
-      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
+      className="w-full container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
     >
       {/* Section Header & Category Filter Tabs */}
       <motion.div

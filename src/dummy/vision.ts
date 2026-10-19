@@ -1,45 +1,40 @@
-import { ShieldCheck, Trees, Gauge, Headset, type LucideIcon } from "lucide-react"
+import {
+  PackageCheck,
+  HandHeart,
+  Sparkles,
+  Gem,
+  type LucideIcon,
+} from "lucide-react"
 
-export interface VisionCommitmentItem {
-  id: string
-  title: string
-  desc: string
+export interface VisionReasonItem {
   icon: LucideIcon
-  badgeBg: string
-  iconColor: string
+  title: string
+  description: string
 }
 
-export const visionCommitments: VisionCommitmentItem[] = [
+export const visionReasons: VisionReasonItem[] = [
   {
-    id: "vc-1",
-    title: "100% Quality Promise",
-    desc: "If your print isn’t flawless, we’ll reprint it immediately or refund your entire order.",
-    icon: ShieldCheck,
-    badgeBg: "bg-violet-100 dark:bg-indigo-950/60",
-    iconColor: "text-indigo-600 dark:text-indigo-400",
+    icon: PackageCheck,
+    title: "Fast, reliable delivery",
+    description:
+      "Get your print essentials delivered quickly with dependable production and shipping.",
   },
   {
-    id: "vc-2",
-    title: "Eco-Conscious Pulp",
-    desc: "FSC-certified papers, water-based nontoxic inks, and plastic-free packaging materials.",
-    icon: Trees,
-    badgeBg: "bg-emerald-50 dark:bg-emerald-950/60",
-    iconColor: "text-emerald-600 dark:text-emerald-400",
+    icon: HandHeart,
+    title: "The PrintMart promise",
+    description:
+      "We care about the final result and work to make sure your order feels right.",
   },
   {
-    id: "vc-3",
-    title: "Fast & Climate-Neutral",
-    desc: "Expedited 48-hour print cycles paired with carbon-offset global courier delivery.",
-    icon: Gauge,
-    badgeBg: "bg-blue-50 dark:bg-blue-950/60",
-    iconColor: "text-blue-600 dark:text-blue-400",
+    icon: Sparkles,
+    title: "Business perks",
+    description:
+      "Enjoy better value, helpful support and print solutions built for growing brands.",
   },
   {
-    id: "vc-4",
-    title: "Master Print Support",
-    desc: "Real graphic print technicians review your files and answer queries 7 days a week.",
-    icon: Headset,
-    badgeBg: "bg-amber-50 dark:bg-amber-950/60",
-    iconColor: "text-amber-600 dark:text-amber-400",
+    icon: Gem,
+    title: "Premium papers & finishes",
+    description:
+      "Choose from quality materials and finishes that make every printed piece feel special.",
   },
 ]

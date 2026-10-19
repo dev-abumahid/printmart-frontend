@@ -4,6 +4,7 @@ import { Check } from "lucide-react"
 
 import { useReducedMotion } from "@/hooks/useReducedMotion"
 import { cn } from "@/lib/utils"
+import ctaBg from "@/assets/cta.jpg"
 
 export default function Cta() {
   const prefersReduced = useReducedMotion()
@@ -23,29 +24,44 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-newsletter-heading"
-      className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-16 sm:pb-24 select-none"
+      className="w-full container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-16 sm:pb-24 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 24 }}
         whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="relative w-full rounded-3xl bg-indigo-600 px-6 py-14 sm:py-16 md:py-20 lg:px-20 shadow-xl overflow-hidden flex flex-col items-center justify-center text-center"
+        className="relative w-full rounded-3xl bg-gray-900 px-6 py-14 sm:py-16 md:py-20 lg:px-20 shadow-2xl overflow-hidden flex flex-col items-center justify-center text-center border border-indigo-500/20 dark:border-zinc-800"
       >
+        {/* Background Image */}
+        <img
+          src={ctaBg}
+          alt=""
+          role="presentation"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+        />
+
+        {/* Cinematic Gradient Tint for Text Contrast & Dark Mode */}
+        <div
+          className="absolute inset-0 bg-linear-to-t from-gray-950/90 via-gray-900/80 to-gray-950/85 dark:from-zinc-950/95 dark:via-zinc-900/85 dark:to-zinc-950/90 pointer-events-none"
+          aria-hidden="true"
+        />
+
         {/* Ambient Glow Orbs */}
         <div
-          className="absolute -left-24 -top-24 size-80 rounded-full bg-white/10 blur-[30px] pointer-events-none"
+          className="absolute -left-24 -top-24 size-80 rounded-full bg-white/10 blur-[40px] pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute -right-20 -bottom-20 size-80 rounded-full bg-indigo-500/50 blur-[40px] pointer-events-none"
+          className="absolute -right-20 -bottom-20 size-80 rounded-full bg-gray-500/30 blur-[50px] pointer-events-none"
           aria-hidden="true"
         />
 
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-[768px] flex flex-col items-center gap-4">
           {/* Eyebrow Badge */}
-          <div className="inline-flex items-center justify-center rounded-full bg-white/20 px-3.5 py-1 backdrop-blur-sm border border-white/20 shadow-sm">
+          <div className="inline-flex items-center justify-center rounded-full bg-white/20 px-3.5 py-1 backdrop-blur-md border border-white/25 shadow-sm">
             <span className="text-center text-xs font-bold font-jakarta uppercase tracking-wide text-white leading-4">
               ATELIER JOURNAL &amp; PERKS
             </span>

@@ -43,4 +43,24 @@ export const communityReviews: CommunityReviewItem[] = [
     role: "Calligrapher",
     imageUrl: rating3Img,
   },
+  {
+    id: "rev-4",
+    handle: "@elena_designs",
+    rating: 5,
+    quote:
+      "The cotton deckled paper and gold foil registration is second to none. My wedding stationery clients are continually mesmerized.",
+    author: "Elena Rostova",
+    role: "Calligrapher",
+    imageUrl: rating3Img,
+  },
+  {
+    id: "rev-5",
+    handle: "@elena_designs",
+    rating: 5,
+    quote:
+      "The cotton deckled paper and gold foil registration is second to none. My wedding stationery clients are continually mesmerized.",
+    author: "Elena Rostova",
+    role: "Calligrapher",
+    imageUrl: rating3Img,
+  },
 ]
