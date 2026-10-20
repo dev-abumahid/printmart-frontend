@@ -41,7 +41,7 @@ const MainLayout = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-indigo-500/15 selection:text-indigo-600">
+    <div className="min-h-screen bg-transparent text-foreground antialiased selection:bg-emerald-500/15 selection:text-emerald-700">
       <Navbar/>
       <Outlet />
       <Footer/>

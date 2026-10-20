@@ -11,14 +11,14 @@ export default function OfferBanner() {
   return (
     <section
       aria-labelledby="offer-banner-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-14 sm:py-20 lg:py-24 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 24 }}
         whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="relative overflow-hidden rounded-2xl bg-[#f4f2ed] dark:bg-zinc-900 border border-black/5 dark:border-zinc-800"
+        className="relative overflow-hidden rounded-2xl bg-[#eef7ff] dark:bg-zinc-900 border border-black/5 dark:border-zinc-800"
       >
         <div className="grid lg:grid-cols-2 items-stretch">
           {/* Content */}
@@ -41,7 +41,7 @@ export default function OfferBanner() {
 
             <button
               type="button"
-              className="mt-6 sm:mt-8 w-fit rounded-md bg-gray-950 px-5 py-2.5 text-sm font-semibold font-jakarta leading-5 text-white transition-all duration-200 hover:bg-indigo-600 active:scale-95 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f2ed] dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-indigo-400"
+              className="mt-6 sm:mt-8 w-fit rounded-md bg-[#0b2b4c] px-5 py-2.5 text-sm font-semibold font-jakarta leading-5 text-white transition-all duration-200 hover:bg-[#174a77] active:scale-95 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#eef7ff] dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-emerald-300"
             >
               Explore samples
             </button>

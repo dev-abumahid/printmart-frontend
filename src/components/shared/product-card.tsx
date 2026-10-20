@@ -108,7 +108,7 @@ export default function ProductCard({
 
         {/* Rating Row */}
         <div className="flex items-center gap-1.5 pt-3">
-          <Star className="size-3.5 fill-amber-500 text-amber-500 shrink-0" />
+          <Star className="size-3.5 fill-emerald-500 text-emerald-500 shrink-0" />
           <span className="text-xs font-bold tracking-wide text-gray-900 dark:text-zinc-100 font-jakarta leading-4">
             {product.rating.toFixed(1)}
           </span>
@@ -151,10 +151,10 @@ export default function ProductCard({
             type="button"
             onClick={handleQuickCustomize}
             className={cn(
-              "rounded-lg bg-gray-100 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-gray-900",
-              "hover:bg-gray-900 hover:text-white active:scale-95",
-              "dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-900",
-              "transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 font-jakarta leading-4"
+              "rounded-lg bg-[#0b2b4c] px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white",
+              "hover:bg-[#174a77] active:scale-95",
+              "dark:bg-emerald-400 dark:text-[#04121c] dark:hover:bg-emerald-300",
+              "transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 font-jakarta leading-4"
             )}
           >
             Quick Customize

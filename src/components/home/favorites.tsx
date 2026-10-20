@@ -14,7 +14,7 @@ export default function Favorites() {
   return (
     <section
       aria-labelledby="favorites-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-14 sm:py-20 lg:py-24 select-none"
     >
       {/* Section Header */}
       <motion.div

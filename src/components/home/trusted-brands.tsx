@@ -185,7 +185,7 @@ export default function TrustedBrands() {
   return (
     <section
       aria-label="Trusted Clients and Brands"
-      className="section-gradient relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 py-10 sm:py-12 lg:py-14 select-none"
+      className="relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 py-10 sm:py-12 lg:py-14 select-none"
     >
       {/* Top Ambient Glow */}
       <div
@@ -215,13 +215,13 @@ export default function TrustedBrands() {
       <div className="relative w-full overflow-hidden">
         {/* Left Fade Mask */}
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-gray-50 dark:from-zinc-950 via-gray-50/80 dark:via-zinc-950/80 to-transparent sm:w-32 lg:w-44"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#eef7ff] dark:from-[#081522] via-[#eef7ff]/80 dark:via-[#081522]/80 to-transparent sm:w-32 lg:w-44"
           aria-hidden="true"
         />
 
         {/* Right Fade Mask */}
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-gray-50 dark:from-zinc-950 via-gray-50/80 dark:via-zinc-950/80 to-transparent sm:w-32 lg:w-44"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#eef7ff] dark:from-[#081522] via-[#eef7ff]/80 dark:via-[#081522]/80 to-transparent sm:w-32 lg:w-44"
           aria-hidden="true"
         />
 

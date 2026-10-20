@@ -23,7 +23,7 @@ function ServiceCard({ service }: ServiceCardProps) {
         aria-label={service.title}
         className="group w-64 sm:w-72 shrink-0 cursor-pointer focus-visible:outline-none"
       >
-        <div className="relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-[#22375c] px-6 text-white transition-transform duration-300 group-hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-indigo-500">
+        <div className="relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden rounded-xl bg-[#0b2b4c] px-6 text-white transition-transform duration-300 group-hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-emerald-400">
           <Layers
             className="size-16 sm:size-20 text-sky-400 transition-transform duration-300 group-hover:scale-110"
             strokeWidth={1.5}
@@ -70,7 +70,7 @@ export default function Services() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-14 sm:py-20 lg:py-2 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 20 }}

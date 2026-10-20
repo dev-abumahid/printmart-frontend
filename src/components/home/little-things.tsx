@@ -31,12 +31,12 @@ function LittleThingCard({ item, index }: LittleThingCardProps) {
         "group relative flex flex-col justify-between rounded-2xl bg-white p-3 dark:bg-zinc-900",
         "border border-gray-200/90 dark:border-zinc-800",
         "shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] hover:shadow-xl dark:hover:shadow-[0px_10px_30px_rgba(0,0,0,0.6)]",
-        "transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500",
+        "transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500",
         "w-56 sm:w-60 md:w-64 shrink-0 snap-start",
       )}
     >
       {/* Top Image Preview Area */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-orange-50 dark:bg-zinc-800 mb-2.5">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-rose-50 dark:bg-zinc-800 mb-2.5">
         <img
           src={item.imageUrl}
           alt={item.title}
@@ -46,7 +46,7 @@ function LittleThingCard({ item, index }: LittleThingCardProps) {
 
         {/* Quality Material Badge */}
         <div className="absolute top-2 left-2 z-10 rounded-full bg-white/90 px-2.5 py-0.5 backdrop-blur-[2px] shadow-sm dark:bg-zinc-900/90">
-          <span className="text-xs font-semibold tracking-wide text-amber-600 dark:text-amber-400 font-jakarta leading-4">
+          <span className="text-xs font-semibold tracking-wide text-rose-600 dark:text-rose-400 font-jakarta leading-4">
             {item.badge}
           </span>
         </div>
@@ -55,7 +55,7 @@ function LittleThingCard({ item, index }: LittleThingCardProps) {
       {/* Card Info Content */}
       <div className="flex flex-1 flex-col justify-between gap-1 px-1 pb-1">
         <div className="flex flex-col gap-1">
-          <h3 className="line-clamp-2 text-lg font-semibold leading-6 text-gray-900 transition-colors group-hover:text-amber-600 dark:text-zinc-100 dark:group-hover:text-amber-400 font-jakarta">
+          <h3 className="line-clamp-2 text-lg font-semibold leading-6 text-gray-900 transition-colors group-hover:text-rose-600 dark:text-zinc-100 dark:group-hover:text-rose-400 font-jakarta">
             {item.title}
           </h3>
         </div>
@@ -141,7 +141,7 @@ export default function LittleThings() {
       aria-labelledby="little-things-heading"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
+      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
     >
       {/* Section Header with Navigation Controls */}
       <motion.div
@@ -154,8 +154,8 @@ export default function LittleThings() {
         {/* Title and Eyebrow */}
         <div className="flex flex-col justify-start items-start gap-1.5 pt-1.5">
           <div className="inline-flex items-center gap-2">
-            <span className="size-1.5 bg-amber-600 dark:bg-amber-500 rounded-full animate-pulse" />
-            <span className="text-amber-600 dark:text-amber-400 text-xs font-bold font-jakarta uppercase leading-4 tracking-wide">
+            <span className="size-1.5 bg-rose-600 dark:bg-rose-500 rounded-full animate-pulse" />
+            <span className="text-rose-600 dark:text-rose-400 text-xs font-bold font-jakarta uppercase leading-4 tracking-wide">
               Little Things. Big Feelings.
             </span>
           </div>

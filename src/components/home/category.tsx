@@ -82,7 +82,7 @@ export default function Category() {
   return (
     <section
       aria-labelledby="category-showcase-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-14 sm:py-20 lg:py-24 select-none"
     >
       {/* Section Header */}
       <motion.div

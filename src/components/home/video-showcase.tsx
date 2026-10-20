@@ -52,7 +52,7 @@ export default function VideoShowcase() {
   return (
     <section
       aria-label="Brand Video Showcase"
-      className="section-gradient relative w-full overflow-hidden bg-black select-none"
+      className="relative w-full overflow-hidden bg-black select-none"
     >
       <div className="relative h-[46vh] min-h-[360px] w-full overflow-hidden sm:h-[50vh] sm:min-h-[400px] lg:h-[56vh] lg:min-h-[480px] 2xl:h-[60vh]">
         {/* Background Video with Subtle Parallax Bleed */}
@@ -76,7 +76,7 @@ export default function VideoShowcase() {
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-linear-to-b from-indigo-950/35 via-transparent to-amber-950/35"
+          className="pointer-events-none absolute inset-0 bg-linear-to-b from-indigo-950/35 via-transparent to-rose-950/35"
           aria-hidden="true"
         />
         <div

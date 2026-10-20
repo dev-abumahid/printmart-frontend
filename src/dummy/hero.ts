@@ -1,50 +1,50 @@
 import {
-  LayoutTemplate,
-  Sparkles,
   BadgeCheck,
   Box,
+  LayoutTemplate,
+  Sparkles,
   Truck,
   type LucideIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import banner2Img from "@/assets/hero/banner2.png"
-import banner3Img from "@/assets/hero/banner3.png"
+import banner2Img from "@/assets/hero/banner2.png";
+import banner3Img from "@/assets/hero/banner3.png";
 
 export interface DynamicHeroSlideItem {
-  id: string
-  eyebrow: string
-  titleA: string
-  titleB: string
-  description: string
+  id: string;
+  eyebrow: string;
+  titleA: string;
+  titleB: string;
+  description: string;
   primaryCta: {
-    label: string
-    href: string
-  }
+    label: string;
+    href: string;
+  };
   secondaryCta: {
-    label: string
-    href: string
-  }
-  image: string
+    label: string;
+    href: string;
+  };
+  image: string;
   overlayTag?: {
-    icon: LucideIcon
-    iconColor?: string
-    iconBg?: string
-    eyebrow: string
-    title: string
-    badge: string
-    badgeBg?: string
-    badgeColor?: string
-  }
+    icon: LucideIcon;
+    iconColor?: string;
+    iconBg?: string;
+    eyebrow: string;
+    title: string;
+    badge: string;
+    badgeBg?: string;
+    badgeColor?: string;
+  };
   socialProof?: {
-    avatars: string[]
-    rating: number
-    text: string
-  }
+    avatars: string[];
+    rating: number;
+    text: string;
+  };
   trustHighlights?: Array<{
-    icon: LucideIcon
-    text: string
-    iconColor?: string
-  }>
+    icon: LucideIcon;
+    text: string;
+    iconColor?: string;
+  }>;
 }
 
 export const dynamicHeroSlides: DynamicHeroSlideItem[] = [
@@ -124,4 +124,4 @@ export const dynamicHeroSlides: DynamicHeroSlideItem[] = [
       },
     ],
   },
-]
+];

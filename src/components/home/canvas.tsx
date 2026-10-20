@@ -21,7 +21,7 @@ import { cn } from "@/lib/utils"
 
 const garmentColors = [
   { id: "black", label: "Midnight Navy", class: "bg-slate-900" },
-  { id: "natural", label: "Natural Ecru", class: "bg-amber-50" },
+  { id: "natural", label: "Natural Ecru", class: "bg-stone-100" },
   { id: "forest", label: "Forest Green", class: "bg-emerald-950" },
   { id: "heather", label: "Heather Stone", class: "bg-stone-300" },
 ]
@@ -55,7 +55,7 @@ export default function Canvase() {
   return (
     <section
       aria-labelledby="interactive-studio-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-14 sm:py-20 lg:py-24 select-none"
     >
       {/* Outer Dark Hero Card */}
       <motion.div
@@ -63,22 +63,22 @@ export default function Canvase() {
         whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="relative w-full rounded-3xl bg-gray-800 p-6 sm:p-10 md:p-14 lg:p-20 shadow-2xl overflow-hidden flex flex-col gap-10 sm:gap-14 border border-slate-700/50"
+        className="relative w-full rounded-3xl bg-[#0b2b4c] p-6 sm:p-10 md:p-14 lg:p-20 shadow-2xl overflow-hidden flex flex-col gap-10 sm:gap-14 border border-emerald-400/20"
       >
         {/* Ambient Radial Glowing Orbs */}
         <div
-          className="absolute -top-32 -right-16 size-96 rounded-full bg-indigo-600/30 blur-[100px] pointer-events-none"
+          className="absolute -top-32 -right-16 size-96 rounded-full bg-emerald-500/25 blur-[100px] pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute -bottom-24 -left-16 size-80 rounded-full bg-violet-600/20 blur-[90px] pointer-events-none"
+          className="absolute -bottom-24 -left-16 size-80 rounded-full bg-rose-600/20 blur-[90px] pointer-events-none"
           aria-hidden="true"
         />
 
         {/* Studio Banner Header */}
         <div className="relative z-10 w-full flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
           <div className="flex flex-col items-start gap-2 max-w-2xl">
-            <span className="text-violet-300 text-xs font-bold font-jakarta uppercase tracking-wide leading-4">
+            <span className="text-emerald-300 text-xs font-bold font-jakarta uppercase tracking-wide leading-4">
               INTERACTIVE BROWSER STUDIO
             </span>
 
@@ -130,7 +130,7 @@ export default function Canvase() {
           <div className="px-4 py-3 bg-slate-200 border-b border-slate-300/80 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <div className="size-3 bg-rose-400 rounded-full" />
-              <div className="size-3 bg-amber-400 rounded-full" />
+              <div className="size-3 bg-emerald-400 rounded-full" />
               <div className="size-3 bg-emerald-400 rounded-full" />
               <span className="pl-3 text-gray-700 text-xs font-bold font-jakarta tracking-wide truncate">
                 Atelier Studio — Heavyweight Oversized Tee (3D Canvas)

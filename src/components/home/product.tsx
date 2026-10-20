@@ -24,7 +24,7 @@ export default function Product() {
   return (
     <section
       aria-labelledby="curated-essentials-heading"
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
+      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
     >
       {/* Section Header & Category Filter Tabs */}
       <motion.div
@@ -76,7 +76,7 @@ export default function Product() {
                 {isActive && (
                   <motion.div
                     layoutId="activeProductFilter"
-                    className="absolute inset-0 bg-gray-900 dark:bg-zinc-100 rounded-lg shadow-sm"
+                    className="absolute inset-0 bg-[#0b2b4c] dark:bg-emerald-400 rounded-lg shadow-sm"
                     transition={{
                       type: "spring",
                       stiffness: 400,

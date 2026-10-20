@@ -4,10 +4,15 @@ import {
   ArrowRight,
   BadgeCheck,
   Box,
+  ChevronRight,
+  Eye,
+  ImagePlus,
   LayoutTemplate,
   Recycle,
+  ShoppingBag,
   Sparkles,
   Truck,
+  Type,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useRef } from "react";
@@ -28,6 +33,39 @@ import laseretchedImg from "@/assets/hero/laseretched.png";
 import packagingImg from "@/assets/hero/packaging.png";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const quickTools = [
+  {
+    icon: Type,
+    label: "Add Your Text",
+    href: "/editor?tool=text",
+    tone: "bg-[#edf5ff] text-[#2388d8]",
+  },
+  {
+    icon: ImagePlus,
+    label: "Upload Images",
+    href: "/editor?tool=upload",
+    tone: "bg-[#ecfbf4] text-[#16a56e]",
+  },
+  {
+    icon: LayoutTemplate,
+    label: "Choose Templates",
+    href: "/editor?tool=templates",
+    tone: "bg-[#f3efff] text-[#7758eb]",
+  },
+  {
+    icon: ShoppingBag,
+    label: "Pick Products",
+    href: "/products",
+    tone: "bg-[#fff0f6] text-[#df4a88]",
+  },
+  {
+    icon: Eye,
+    label: "Live Preview",
+    href: "/editor?tool=preview",
+    tone: "bg-[#fff5e8] text-[#ef8a28]",
+  },
+];
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,13 +118,13 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="section-container section-gradient relative isolate pt-6 sm:pt-10 md:pt-14 pb-14 sm:pb-18 lg:pb-24 overflow-hidden select-none"
+      className="section-container relative isolate pt-6 sm:pt-10 md:pt-14 pb-14 sm:pb-18 lg:pb-24 overflow-hidden select-none"
       aria-label="Hero - Print Your Imagination"
     >
       {/* Ambient Gradient Glow (Optimized for both Light & Dark modes) */}
       <div
         ref={bgGlowRef}
-        className="w-150 sm:w-187.5 lg:w-230 h-95 sm:h-120 lg:h-140 -right-30 sm:-right-15 lg:left-55 top-7.5 lg:top-12 absolute bg-linear-to-tr from-indigo-600/10 via-orange-200/25 to-transparent dark:from-indigo-500/20 dark:via-orange-500/15 dark:to-transparent rounded-full blur-[48px] lg:blur-3xl pointer-events-none -z-10"
+        className="w-150 sm:w-187.5 lg:w-230 h-95 sm:h-120 lg:h-140 -right-30 sm:-right-15 lg:left-55 top-7.5 lg:top-12 absolute bg-linear-to-tr from-indigo-600/10 via-emerald-200/25 to-transparent dark:from-indigo-500/20 dark:via-emerald-500/15 dark:to-transparent rounded-full blur-[48px] lg:blur-3xl pointer-events-none -z-10"
         aria-hidden="true"
       />
 
@@ -101,7 +139,7 @@ export default function Hero() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        className="hero-home-swiper w-full !overflow-visible"
+        className="hero-home-swiper w-full overflow-visible!"
       >
         {/* =========================================================================
             SLIDE 1 (STATIC): Custom Hero Design (Foil, Mug, Tote, Box 3D Parallax)
@@ -111,45 +149,48 @@ export default function Hero() {
             {/* Left Content Column */}
             <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-start items-start z-10">
               {/* Top Pill Badge */}
-              <div className="px-3.5 py-1.5 bg-white dark:bg-zinc-900/90 rounded-full shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-[0px_2px_10px_0px_rgba(0,0,0,0.5)] border border-gray-200 dark:border-zinc-800 inline-flex justify-start items-center gap-2">
-                <span className="size-2 bg-indigo-600 dark:bg-indigo-500 rounded-full animate-pulse" />
-                <span className="text-gray-900 dark:text-zinc-100 text-xs font-bold font-jakarta uppercase leading-4 tracking-wide">
+              <div className="px-3.5 py-1.5 bg-white/90 dark:bg-zinc-900/90 rounded-full shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-[0px_2px_10px_0px_rgba(0,0,0,0.5)] border border-[#dbe6f2] dark:border-zinc-800 inline-flex justify-start items-center gap-2 backdrop-blur-sm">
+                <span className="size-2 bg-[#4d68f2] rounded-full animate-pulse" />
+                <span className="text-[#5f82a3] dark:text-zinc-300 text-[10px] sm:text-[11px] font-bold font-jakarta uppercase leading-4 tracking-[0.18em]">
                   PRINT YOUR IMAGINATION
                 </span>
               </div>
 
               {/* Main Headline */}
               <div className="pt-5 sm:pt-6">
-                <h1 className="text-gray-900 dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-extrabold font-jakarta leading-[1.12] sm:leading-[1.15] lg:leading-20 tracking-tight">
+                <h1 className="text-[#0b2b4c] dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-bold font-jakarta leading-[1.08] sm:leading-[1.1] lg:leading-[1.08] tracking-[-0.04em]">
                   <span className="block">Your Ideas.</span>
-                  <span className="inline-block relative">
-                    <span className="text-indigo-500 dark:text-indigo-400">
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-[#4d68f2] via-[#8e43d7] to-[#de4e87] bg-clip-text text-transparent dark:from-[#8fb4ff] dark:via-[#c49aee] dark:to-[#f08fbb]">
                       Beautifully
                     </span>
-                    {/* Hand-drawn Orange Curved Underline */}
                     <svg
                       className="absolute -bottom-2 sm:-bottom-2.5 left-0 w-full h-3 overflow-visible pointer-events-none"
                       viewBox="0 0 270 14"
                       fill="none"
+                      preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
                       aria-hidden="true"
                     >
                       <path
                         d="M 4 8.5 C 70 14.5, 185 14.5, 266 5"
-                        stroke="#FDBA74"
+                        stroke="#55c2bb"
                         strokeWidth="4"
                         strokeLinecap="round"
-                        className="stroke-[#FDBA74] dark:stroke-amber-400"
+                        className="stroke-[#55c2bb] dark:stroke-emerald-300"
                       />
                     </svg>
                   </span>
-                  <span> Printed.</span>
+                  <span className="text-[#0b2b4c] dark:text-zinc-50">
+                    {" "}
+                    Printed.
+                  </span>
                 </h1>
               </div>
 
               {/* Subtitle / Description */}
               <div className="pt-5 sm:pt-6 max-w-xl">
-                <p className="text-gray-600 dark:text-zinc-400 text-base sm:text-lg font-normal font-inter leading-relaxed sm:leading-7">
+                <p className="text-[#54697f] dark:text-zinc-400 text-base sm:text-lg font-normal font-inter leading-relaxed sm:leading-7">
                   Create custom products that bring your ideas to life. From
                   business essentials to personalized gifts, make every detail
                   yours with museum-grade craftsmanship and real-time 3D
@@ -163,10 +204,10 @@ export default function Hero() {
                   <Button
                     asChild
                     size="lg"
-                    className="h-12 px-7 rounded-full bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-semibold font-jakarta text-base shadow-[0px_4px_14px_rgba(99,102,241,0.35)] dark:shadow-[0px_4px_20px_rgba(99,102,241,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
+                    className="h-12 px-7 rounded-full bg-[#0b2b4c] hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
                   >
                     <Link to="/editor">
-                      <Sparkles className="size-4 text-white" />
+                      <Sparkles className="size-4" />
                       <span>Start Creating</span>
                     </Link>
                   </Button>
@@ -175,11 +216,11 @@ export default function Hero() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="h-12 px-7 rounded-full bg-white dark:bg-zinc-900/90 hover:bg-gray-50 dark:hover:bg-zinc-800 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-none hover:shadow-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
+                    className="h-12 px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
                   >
                     <Link to="/products">
                       <span>Explore Products</span>
-                      <ArrowRight className="size-3.5 text-indigo-600 dark:text-indigo-400 group-hover:translate-x-1 transition-transform duration-200" />
+                      <ArrowRight className="size-3.5 text-[#4f8fd0] dark:text-emerald-400 group-hover:translate-x-1 transition-transform duration-200" />
                     </Link>
                   </Button>
                 </div>
@@ -187,9 +228,9 @@ export default function Hero() {
 
               {/* Trust Highlights */}
               <div className="pt-6 sm:pt-7">
-                <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-3.5 sm:gap-x-4 text-xs font-semibold font-jakarta text-gray-900 dark:text-zinc-200">
+                <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-3.5 sm:gap-x-4 text-xs font-semibold font-jakarta text-[#173653] dark:text-zinc-200">
                   <div className="flex items-center gap-1.5">
-                    <BadgeCheck className="size-4 text-amber-500 fill-amber-500/20" />
+                    <BadgeCheck className="size-4 text-emerald-500 fill-emerald-500/20" />
                     <span>Premium Quality</span>
                   </div>
                   <span className="text-gray-300 dark:text-zinc-700 select-none">
@@ -221,7 +262,7 @@ export default function Hero() {
                   {/* 1. Gold Foil Card (Top Left) */}
                   <div
                     ref={cardFoilRef}
-                    className="w-56 h-36 p-2.5 left-[32.14px] top-[-15.31px] absolute origin-top-left rotate-6 z-10 transform-gpu will-change-transform"
+                    className="w-96 h-56 p-2.5 -left-45 top-[-15.31px] absolute origin-top-left rotate-6 z-10 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -266,7 +307,7 @@ export default function Hero() {
                   {/* 2. Laser Etched Mug Card (Top Right) */}
                   <div
                     ref={cardMugRef}
-                    className="w-44 h-48 p-2.5 left-[409.14px] top-[27.53px] absolute origin-top-left rotate-3 z-10 transform-gpu will-change-transform"
+                    className="w-62 h-86 p-2.5 left-[450.14px] top-[27.53px] absolute origin-top-left rotate-3 z-10 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -312,7 +353,7 @@ export default function Hero() {
                   {/* 3. Branded Tote Card (Centerpiece) */}
                   <div
                     ref={cardToteRef}
-                    className="w-64 h-80 p-3 left-[161.80px] top-[116.92px] absolute origin-top-left -rotate-3 z-15 transform-gpu will-change-transform"
+                    className="w-89 h-110 p-3 left-27.5 top-[116.92px] absolute origin-top-left -rotate-3 z-15 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -368,7 +409,7 @@ export default function Hero() {
                   {/* 4. Packaging Card (Bottom Right) */}
                   <div
                     ref={cardPackRef}
-                    className="w-61.25 h-44 p-2.5 left-[315.46px] top-[393.03px] absolute origin-top-left -rotate-6 z-20 transform-gpu will-change-transform"
+                    className="w-76 h-56 p-2.5 left-[315.46px] top-112.5 absolute origin-top-left -rotate-6 z-20 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -421,7 +462,7 @@ export default function Hero() {
                   {/* 5. 48h Dispatch Ready Floating Pill Badge */}
                   <div
                     ref={badgeDispatchRef}
-                    className="h-7 px-3 py-1.5 -left-4 top-63.75 absolute z-25 transform-gpu will-change-transform"
+                    className="h-7 px-3 py-1.5 -left-20 top-80 absolute z-25 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -454,7 +495,7 @@ export default function Hero() {
                   {/* 6. Custom Stickers Floating Badge Card */}
                   <div
                     ref={badgeStickersRef}
-                    className="left-4 top-109.5 absolute z-25 transform-gpu will-change-transform"
+                    className="-left-20 top-109.5 absolute z-25 transform-gpu will-change-transform"
                   >
                     <motion.div
                       animate={
@@ -508,39 +549,39 @@ export default function Hero() {
 
           return (
             <SwiperSlide key={slide.id} className="w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-130">
+              <div className="grid grid-cols-1 items-center gap-10 lg:min-h-[590px] lg:grid-cols-[0.82fr_1.18fr] lg:gap-2 xl:gap-2">
                 {/* Left Content Column */}
-                <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-start items-start z-10">
+                <div className="relative z-10 flex max-w-[650px] flex-col items-start justify-start lg:pl-4 xl:pl-8 2xl:pl-12">
                   {/* Top Pill Badge */}
-                  <div className="px-3.5 py-1.5 bg-white dark:bg-zinc-900/90 rounded-full shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-[0px_2px_10px_0px_rgba(0,0,0,0.5)] border border-gray-200 dark:border-zinc-800 inline-flex justify-start items-center gap-2">
-                    <span className="size-2 bg-indigo-600 dark:bg-indigo-500 rounded-full animate-pulse" />
-                    <span className="text-gray-900 dark:text-zinc-100 text-xs font-bold font-jakarta uppercase leading-4 tracking-wide">
+                  <div className="px-3.5 py-1.5 bg-white/90 dark:bg-zinc-900/90 rounded-full shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-[0px_2px_10px_0px_rgba(0,0,0,0.5)] border border-[#dbe6f2] dark:border-zinc-800 inline-flex justify-start items-center gap-2 backdrop-blur-sm">
+                    <span className="size-2 bg-[#4d68f2] rounded-full animate-pulse" />
+                    <span className="text-[#5f82a3] dark:text-zinc-300 text-[10px] sm:text-[11px] font-bold font-jakarta uppercase leading-4 tracking-[0.18em]">
                       {slide.eyebrow}
                     </span>
                   </div>
 
                   {/* Main Headline */}
                   <div className="pt-5 sm:pt-6">
-                    <h1 className="text-gray-900 dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-extrabold font-jakarta leading-[1.12] sm:leading-[1.15] lg:leading-20 tracking-tight">
+                    <h1 className="text-[#0b2b4c] dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-bold font-jakarta leading-[1.08] sm:leading-[1.1] lg:leading-[1.08] tracking-[-0.04em]">
                       <span className="block">{slide.titleA}</span>
-                      <span className="inline-block relative">
-                        <span className="text-indigo-500 dark:text-indigo-400">
+                      <span className="relative inline-block">
+                        <span className="bg-gradient-to-r from-[#4d68f2] via-[#8e43d7] to-[#de4e87] bg-clip-text text-transparent dark:from-[#8fb4ff] dark:via-[#c49aee] dark:to-[#f08fbb]">
                           {slide.titleB}
                         </span>
-                        {/* Hand-drawn Orange Curved Underline */}
                         <svg
                           className="absolute -bottom-2 sm:-bottom-2.5 left-0 w-full h-3 overflow-visible pointer-events-none"
                           viewBox="0 0 270 14"
                           fill="none"
+                          preserveAspectRatio="none"
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
                         >
                           <path
                             d="M 4 8.5 C 70 14.5, 185 14.5, 266 5"
-                            stroke="#FDBA74"
+                            stroke="#55c2bb"
                             strokeWidth="4"
                             strokeLinecap="round"
-                            className="stroke-[#FDBA74] dark:stroke-amber-400"
+                            className="stroke-[#55c2bb] dark:stroke-emerald-300"
                           />
                         </svg>
                       </span>
@@ -549,7 +590,7 @@ export default function Hero() {
 
                   {/* Subtitle / Description */}
                   <div className="pt-5 sm:pt-6 max-w-xl">
-                    <p className="text-gray-600 dark:text-zinc-400 text-base sm:text-lg font-normal font-inter leading-relaxed sm:leading-7">
+                    <p className="text-[#54697f] dark:text-zinc-400 text-base sm:text-lg font-normal font-inter leading-relaxed sm:leading-7">
                       {slide.description}
                     </p>
                   </div>
@@ -560,10 +601,10 @@ export default function Hero() {
                       <Button
                         asChild
                         size="lg"
-                        className="h-12 px-7 rounded-full bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-500 text-white font-semibold font-jakarta text-base shadow-[0px_4px_14px_rgba(99,102,241,0.35)] dark:shadow-[0px_4px_20px_rgba(99,102,241,0.45)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
+                        className="h-12 px-7 rounded-full bg-[#0b2b4c] hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
                       >
                         <Link to={slide.primaryCta.href}>
-                          <Sparkles className="size-4 text-white" />
+                          <Sparkles className="size-4" />
                           <span>{slide.primaryCta.label}</span>
                         </Link>
                       </Button>
@@ -572,10 +613,10 @@ export default function Hero() {
                         asChild
                         variant="outline"
                         size="lg"
-                        className="h-12 px-7 rounded-full bg-white dark:bg-zinc-900/90 hover:bg-gray-50 dark:hover:bg-zinc-800 border border-gray-200 dark:border-zinc-800 text-gray-900 dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] dark:shadow-none hover:shadow-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
+                        className="h-12 px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
                       >
                         <Link to={slide.secondaryCta.href}>
-                          <LayoutTemplate className="size-4 text-indigo-600 dark:text-indigo-400" />
+                          <LayoutTemplate className="size-4 text-[#4f8fd0] dark:text-emerald-400" />
                           <span>{slide.secondaryCta.label}</span>
                         </Link>
                       </Button>
@@ -590,14 +631,14 @@ export default function Hero() {
                           {slide.socialProof.avatars.map((initial) => (
                             <div
                               key={initial}
-                              className="flex size-8 sm:size-9 items-center justify-center rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-zinc-800 dark:to-zinc-700 text-[10px] sm:text-xs font-bold text-indigo-900 dark:text-indigo-200 shadow-xs"
+                              className="flex size-8 sm:size-9 items-center justify-center rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-[#dcecf8] to-[#eadcf0] dark:from-zinc-800 dark:to-zinc-700 text-[10px] sm:text-xs font-bold text-[#0b2b4c] dark:text-indigo-200 shadow-xs"
                             >
                               {initial}
                             </div>
                           ))}
                         </div>
                         <div>
-                          <div className="flex gap-0.5 text-amber-500">
+                          <div className="flex gap-0.5 text-[#f6b018]">
                             {Array.from({
                               length: slide.socialProof.rating,
                             }).map((_, i) => (
@@ -606,7 +647,7 @@ export default function Hero() {
                               </span>
                             ))}
                           </div>
-                          <p className="mt-0.5 text-xs font-medium text-gray-600 dark:text-zinc-400">
+                          <p className="mt-0.5 text-xs font-medium text-[#607386] dark:text-zinc-400">
                             {slide.socialProof.text}
                           </p>
                         </div>
@@ -617,7 +658,7 @@ export default function Hero() {
                   {/* Optional Trust Highlights */}
                   {slide.trustHighlights && (
                     <div className="pt-6 sm:pt-7">
-                      <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-3.5 sm:gap-x-4 text-xs font-semibold font-jakarta text-gray-900 dark:text-zinc-200">
+                      <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-3.5 sm:gap-x-4 text-xs font-semibold font-jakarta text-[#173653] dark:text-zinc-200">
                         {slide.trustHighlights.map((item, idx) => {
                           const ItemIcon = item.icon;
                           return (
@@ -643,19 +684,21 @@ export default function Hero() {
                 </div>
 
                 {/* Right Showcase: Dynamic Banner Card */}
-                <div className="lg:col-span-6 xl:col-span-6 w-full flex flex-col justify-center items-center py-4 lg:py-0 overflow-visible">
+                <div className="flex w-full flex-col items-center justify-center overflow-visible py-4 lg:py-0">
                   {/* Desktop Visual Card */}
-                  <div className="relative hidden min-h-115 lg:min-h-130 items-center justify-center lg:flex w-full">
-                   
+                  <div className="relative hidden min-h-[520px] w-full items-center justify-center lg:flex">
+                    {/* Soft backdrop frame */}
+                    <div className="absolute left-[4%] top-1/2 h-[78%] w-[84%] -translate-y-1/2 rounded-[42px] bg-white/42 dark:bg-white/5 shadow-[0_30px_90px_rgba(35,65,105,0.10)] dark:shadow-[0_30px_90px_rgba(0,0,0,0.35)]" />
+
                     {/* Main Card Frame */}
-                    <div className="relative w-[90%] h-110 xl:h-120 overflow-hidden rounded-[28px] border border-gray-200/90 dark:border-zinc-700/80 bg-white dark:bg-zinc-900 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.6)] group">
+                    <div className="relative h-[470px] w-[82%] overflow-hidden rounded-[34px] border border-white/85 dark:border-zinc-700/80 bg-white dark:bg-zinc-900 shadow-[0_30px_80px_rgba(30,55,95,0.16)] dark:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.6)] group xl:h-[500px] xl:w-[84%] 2xl:h-[520px]">
                       <img
                         src={slide.image}
                         alt={`${slide.titleA} ${slide.titleB}`}
                         loading="lazy"
                         className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-103"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-white/5 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b2b4c]/8 via-transparent to-white/5 pointer-events-none" />
 
                       {/* Floating Overlay Feature Tag */}
                       {slide.overlayTag && (
@@ -683,17 +726,70 @@ export default function Hero() {
                         </div>
                       )}
                     </div>
+
+                    {/* Quick design tools popup */}
+                    <div className="absolute right-[1%] top-1/2 z-30 w-[275px] -translate-y-1/2 rounded-[26px] border border-white/85 dark:border-zinc-700/80 bg-white/95 dark:bg-zinc-900/95 p-3.5 shadow-[0_28px_70px_rgba(23,48,78,0.18)] dark:shadow-[0_24px_60px_rgba(0,0,0,0.55)] backdrop-blur-2xl xl:w-[290px]">
+                      <p className="px-2 pb-2 pt-1 text-[10px] font-bold font-jakarta uppercase tracking-[0.16em] text-[#8b99a9] dark:text-zinc-400">
+                        Quick design tools
+                      </p>
+
+                      <div className="space-y-1.5">
+                        {quickTools.map((tool) => {
+                          const Icon = tool.icon;
+                          return (
+                            <Link
+                              key={tool.label}
+                              to={tool.href}
+                              className="group flex min-h-[52px] items-center gap-3 rounded-[15px] px-2.5 py-2 transition-all duration-300 hover:bg-[#f6f8fb] dark:hover:bg-zinc-800/80"
+                            >
+                              <span
+                                className={`flex size-9 shrink-0 items-center justify-center rounded-[11px] ${tool.tone}`}
+                              >
+                                <Icon
+                                  className="size-[18px]"
+                                  strokeWidth={1.9}
+                                />
+                              </span>
+                              <span className="flex-1 text-[13px] font-semibold font-jakarta text-[#173653] dark:text-zinc-100">
+                                {tool.label}
+                              </span>
+                              <ChevronRight className="size-4 text-[#4f8fd0] dark:text-zinc-400 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
 
                   {/* Mobile / Tablet Visual */}
                   <div className="lg:hidden w-full max-w-xl mx-auto">
-                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-gray-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-[0_14px_36px_rgba(0,0,0,0.08)] dark:shadow-[0_14px_36px_rgba(0,0,0,0.5)]">
+                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/90 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-[0_16px_42px_rgba(30,55,95,0.12)] dark:shadow-[0_14px_36px_rgba(0,0,0,0.5)]">
                       <img
                         src={slide.image}
                         alt={`${slide.titleA} ${slide.titleB}`}
                         loading="lazy"
                         className="w-full h-full object-cover object-center"
                       />
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-5 gap-1.5 sm:gap-2">
+                      {quickTools.map((tool) => {
+                        const Icon = tool.icon;
+                        return (
+                          <Link
+                            key={tool.label}
+                            to={tool.href}
+                            aria-label={tool.label}
+                            className="flex min-h-12 items-center justify-center rounded-xl border border-[#e8edf3] dark:border-zinc-700/80 bg-white/90 dark:bg-zinc-900/90 text-[#173653] dark:text-zinc-100 shadow-sm"
+                          >
+                            <span
+                              className={`flex size-8 items-center justify-center rounded-[10px] ${tool.tone}`}
+                            >
+                              <Icon className="size-[15px]" />
+                            </span>
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

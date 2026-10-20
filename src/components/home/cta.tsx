@@ -24,14 +24,14 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-newsletter-heading"
-      className="section-container section-gradient pb-16 sm:pb-24 select-none"
+      className="section-container pb-16 sm:pb-24 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 24 }}
         whileInView={prefersReduced ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="relative w-full rounded-3xl bg-gray-900 px-6 py-14 sm:py-16 md:py-20 lg:px-20 shadow-2xl overflow-hidden flex flex-col items-center justify-center text-center border border-indigo-500/20 dark:border-zinc-800"
+        className="relative w-full rounded-3xl bg-[#0b2b4c] px-6 py-14 sm:py-16 md:py-20 lg:px-20 shadow-2xl overflow-hidden flex flex-col items-center justify-center text-center border border-emerald-400/25 dark:border-zinc-800"
       >
         {/* Background Image */}
         <img
@@ -44,7 +44,7 @@ export default function Cta() {
 
         {/* Cinematic Gradient Tint for Text Contrast & Dark Mode */}
         <div
-          className="absolute inset-0 bg-linear-to-t from-gray-950/90 via-gray-900/80 to-gray-950/85 dark:from-zinc-950/95 dark:via-zinc-900/85 dark:to-zinc-950/90 pointer-events-none"
+          className="absolute inset-0 bg-linear-to-t from-[#041523]/95 via-[#0b2b4c]/85 to-[#041523]/92 dark:from-[#02070d]/95 dark:via-[#081522]/90 dark:to-[#02070d]/95 pointer-events-none"
           aria-hidden="true"
         />
 
@@ -54,7 +54,7 @@ export default function Cta() {
           aria-hidden="true"
         />
         <div
-          className="absolute -right-20 -bottom-20 size-80 rounded-full bg-gray-500/30 blur-[50px] pointer-events-none"
+          className="absolute -right-20 -bottom-20 size-80 rounded-full bg-emerald-500/20 blur-[50px] pointer-events-none"
           aria-hidden="true"
         />
 
@@ -105,7 +105,7 @@ export default function Cta() {
                 "h-12 px-6 rounded-xl text-white text-xs sm:text-sm font-semibold font-jakarta shadow-md transition-all duration-200 shrink-0 cursor-pointer flex items-center justify-center whitespace-nowrap active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
                 isSubmitted
                   ? "bg-emerald-700"
-                  : "bg-gray-900 hover:bg-black"
+                  : "bg-emerald-500 hover:bg-emerald-600"
               )}
             >
               {isSubmitted ? (

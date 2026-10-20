@@ -60,7 +60,7 @@ function ReviewCard({ review, index }: ReviewCardProps) {
         {/* 5-Star Rating Row */}
         <div className="flex items-center gap-1 pt-2">
           {Array.from({ length: review.rating }).map((_, i) => (
-            <Star key={i} className="size-3.5 fill-amber-500 text-amber-500" />
+            <Star key={i} className="size-3.5 fill-emerald-500 text-emerald-500" />
           ))}
         </div>
 
@@ -199,7 +199,7 @@ export default function ReviewRatings() {
       aria-labelledby="community-showcase-heading"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="section-container section-gradient py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
+      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
     >
       {/* Section Header */}
       <motion.div
