@@ -10,9 +10,9 @@ export default function Vision() {
   return (
     <section
       aria-label="Why Choose PrintMart"
-      className="w-full bg-white dark:bg-zinc-950 py-12 sm:py-16 lg:py-20 border-t border-gray-100 dark:border-zinc-800 select-none"
+      className="section-gradient w-full py-12 sm:py-16 lg:py-20 border-t border-gray-100 dark:border-zinc-800 select-none"
     >
-      <div className="mx-auto w-full container px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="section-container">
         {/* TRUST STRIP */}
         <motion.div
           initial={prefersReduced ? false : { opacity: 0, y: 16 }}

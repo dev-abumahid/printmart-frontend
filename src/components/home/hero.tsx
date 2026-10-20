@@ -80,7 +80,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full container mx-auto px-5 sm:px-8 pt-6 sm:pt-10 md:pt-14 sm:pb-18 lg:pb-24 overflow-hidden select-none"
+      className="section-container section-gradient relative isolate pt-6 sm:pt-10 md:pt-14 pb-14 sm:pb-18 lg:pb-24 overflow-hidden select-none"
       aria-label="Hero - Print Your Imagination"
     >
       {/* Ambient Gradient Glow (Optimized for both Light & Dark modes) */}

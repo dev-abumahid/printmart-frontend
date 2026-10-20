@@ -185,7 +185,7 @@ export default function TrustedBrands() {
   return (
     <section
       aria-label="Trusted Clients and Brands"
-      className="relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 bg-gradient-to-b from-gray-50/70 via-white to-gray-50/40 dark:from-zinc-950 dark:via-zinc-900/40 dark:to-zinc-950 py-10 sm:py-12 lg:py-14 select-none"
+      className="section-gradient relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 py-10 sm:py-12 lg:py-14 select-none"
     >
       {/* Top Ambient Glow */}
       <div
@@ -194,7 +194,7 @@ export default function TrustedBrands() {
       />
 
       {/* Header Container */}
-      <div className="relative mx-auto max-w-[1800px] px-5 sm:px-8 lg:px-12">
+      <div className="relative section-container">
         <div className="mx-auto mb-7 max-w-[900px] text-center sm:mb-8 lg:mb-9">
           <div className="mx-auto mb-3 h-px w-12 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
           <p className="text-[14px] sm:text-[15px] font-extrabold font-jakarta uppercase tracking-[0.18em] text-gray-900 dark:text-zinc-100">
@@ -257,7 +257,7 @@ export default function TrustedBrands() {
       </div>
 
       {/* Bottom Accent Divider */}
-      <div className="relative mx-auto mt-7 flex max-w-[1800px] items-center justify-center px-5 sm:mt-8 sm:px-8 lg:mt-9 lg:px-12">
+      <div className="relative mt-7 flex section-container items-center justify-center sm:mt-8 lg:mt-9">
         <span
           className="h-px w-full max-w-[760px] bg-gradient-to-r from-transparent via-gray-200 dark:via-zinc-800 to-transparent"
           aria-hidden="true"

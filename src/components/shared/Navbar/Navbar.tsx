@@ -54,7 +54,7 @@ export const Navbar = () => {
       <header className="relative z-70 w-full overflow-visible bg-white text-[#0b2b4c] shadow-[0_1px_0_rgba(21,47,73,0.08)]">
         {/* PROMO BAR */}
         <div className="bg-[#0b2949] text-white">
-          <div className="mx-auto flex h-9 w-full max-w-360 items-center justify-between px-4 text-[10px] sm:px-6 sm:text-[11px] lg:px-8">
+          <div className="mx-auto flex h-9 w-full max-w-[1900px] items-center justify-between px-4 text-[10px] sm:px-6 sm:text-[11px] lg:px-8">
             <Link
               to="/products"
               className="truncate font-semibold tracking-[0.01em] transition-colors hover:text-[#79d9d3]"
@@ -84,7 +84,7 @@ export const Navbar = () => {
 
         {/* MAIN HEADER */}
         <div className="border-b border-[#e4eaf0] bg-white">
-          <div className="mx-auto flex h-20.5 w-full max-w-360 items-center gap-5 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex h-20.5 w-full max-w-[1900px] items-center gap-5 px-4 sm:px-6 lg:px-8">
             <Link to="/" className="shrink-0">
               <img
                 src={logoImg}
@@ -199,7 +199,7 @@ export const Navbar = () => {
 
         {/* CATEGORY NAV */}
         <div className="hidden border-b border-[#e4eaf0] bg-white xl:block">
-          <div className="mx-auto flex h-14.5 w-full max-w-360 items-stretch px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex h-14.5 w-full max-w-[1900px] items-stretch px-4 sm:px-6 lg:px-8">
             <nav className="flex min-w-0 flex-1 items-stretch justify-between">
               {navItems.map((item) => {
                 const isActive = activeMenu === item.label;
@@ -253,7 +253,7 @@ export const Navbar = () => {
             onMouseLeave={() => setActiveMenu(null)}
           >
             <div className="border-t border-white/[0.07] bg-[#081f38] text-white shadow-[0_28px_70px_rgba(4,21,38,0.34)]">
-              <div className="mx-auto grid w-full max-w-360 grid-cols-[minmax(0,1fr)_310px] gap-8 px-8 py-8 2xl:gap-12">
+              <div className="mx-auto grid w-full max-w-[1900px] grid-cols-[minmax(0,1fr)_310px] gap-8 px-8 py-8 2xl:gap-12">
                 <div className="grid min-w-0 grid-cols-3 gap-x-8 gap-y-7">
                   {activeNav.groups.map((group) => (
                     <div

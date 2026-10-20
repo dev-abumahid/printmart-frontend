@@ -24,7 +24,7 @@ export default function Cta() {
   return (
     <section
       aria-labelledby="cta-newsletter-heading"
-      className="w-full container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-16 sm:pb-24 select-none"
+      className="section-container section-gradient pb-16 sm:pb-24 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 24 }}

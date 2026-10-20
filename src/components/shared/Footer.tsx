@@ -70,7 +70,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-[#0b2949] text-white select-none">
-      <div className="mx-auto w-full max-w-[1920px] px-4 py-10 sm:px-6 lg:px-8 lg:py-12 xl:px-10 2xl:px-12">
+      <div className="section-container py-10 lg:py-12">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.75fr_0.75fr_0.75fr_1.4fr] lg:gap-10 xl:gap-14">
           {/* Brand Info */}
           <div>
@@ -261,7 +261,7 @@ export const Footer = () => {
 
       {/* Bottom Legal Copyright */}
       <div className="border-t border-white/15">
-        <div className="mx-auto flex w-full max-w-[1920px] flex-col items-center justify-between gap-2 px-4 py-4 text-[10px] text-white/55 sm:flex-row sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+        <div className="section-container flex flex-col items-center justify-between gap-2 py-4 text-[10px] text-white/55 sm:flex-row">
           <p>© 2026 Pryntmart. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link to="/contact" className="transition-colors hover:text-white">

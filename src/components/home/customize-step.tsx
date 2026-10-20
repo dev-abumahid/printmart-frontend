@@ -52,7 +52,7 @@ export default function CustomizeStep() {
   return (
     <section
       aria-labelledby="customize-steps-heading"
-      className="w-full max-w-360 mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 lg:py-24 flex flex-col justify-start items-center gap-12 sm:gap-16 select-none"
+      className="section-container section-gradient py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-center gap-12 sm:gap-16 select-none"
     >
       {/* Section Header */}
       <motion.div
