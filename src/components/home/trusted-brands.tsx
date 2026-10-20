@@ -185,7 +185,7 @@ export default function TrustedBrands() {
   return (
     <section
       aria-label="Trusted Clients and Brands"
-      className="relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 py-10 sm:py-12 lg:py-14 select-none"
+      className="relative overflow-hidden border-y border-gray-200/90 dark:border-zinc-800/80 py-7 sm:py-9 lg:py-11 select-none"
     >
       {/* Top Ambient Glow */}
       <div

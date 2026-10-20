@@ -1,8 +1,9 @@
 import { motion } from "motion/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/pagination";
 
 import { categories, type CategoryItem } from "@/dummy/category";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -82,7 +83,7 @@ export default function Category() {
   return (
     <section
       aria-labelledby="category-showcase-heading"
-      className="section-container py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 select-none"
     >
       {/* Section Header */}
       <motion.div
@@ -110,7 +111,7 @@ export default function Category() {
 
       {/* Horizontal Scrolling Categories */}
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         slidesPerView="auto"
         spaceBetween={8}
         loop
@@ -119,6 +120,11 @@ export default function Category() {
           delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
+        }}
+        pagination={{
+          clickable: true,
+          bulletClass: "category-pagination-bullet",
+          bulletActiveClass: "category-pagination-bullet-active",
         }}
         className="category-swiper"
       >

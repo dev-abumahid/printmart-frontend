@@ -55,7 +55,7 @@ export default function Canvase() {
   return (
     <section
       aria-labelledby="interactive-studio-heading"
-      className="section-container py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 select-none"
     >
       {/* Outer Dark Hero Card */}
       <motion.div

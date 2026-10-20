@@ -118,7 +118,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="section-container relative isolate pt-6 sm:pt-10 md:pt-14 pb-14 sm:pb-18 lg:pb-24 overflow-hidden select-none"
+      className="section-container relative isolate pt-5 sm:pt-7 md:pt-9 pb-10 sm:pb-12 lg:pb-16 overflow-hidden select-none"
       aria-label="Hero - Print Your Imagination"
     >
       {/* Ambient Gradient Glow (Optimized for both Light & Dark modes) */}
@@ -158,7 +158,7 @@ export default function Hero() {
 
               {/* Main Headline */}
               <div className="pt-5 sm:pt-6">
-                <h1 className="text-[#0b2b4c] dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-bold font-jakarta leading-[1.08] sm:leading-[1.1] lg:leading-[1.08] tracking-[-0.04em]">
+                <h1 className="text-indigo-600 dark:text-zinc-50 text-4xl sm:text-5xl lg:text-[58px] xl:text-[64px] font-bold font-jakarta leading-[1.08] sm:leading-[1.1] lg:leading-[1.08] tracking-[-0.04em]">
                   <span className="block">Your Ideas.</span>
                   <span className="relative inline-block">
                     <span className="bg-gradient-to-r from-[#4d68f2] via-[#8e43d7] to-[#de4e87] bg-clip-text text-transparent dark:from-[#8fb4ff] dark:via-[#c49aee] dark:to-[#f08fbb]">
@@ -200,11 +200,11 @@ export default function Hero() {
 
               {/* Action CTA Buttons */}
               <div className="pt-6 sm:pt-7">
-                <div className="pt-2 flex flex-wrap items-center gap-4">
+                    <div className="pt-2 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-3 md:gap-4">
                   <Button
                     asChild
                     size="lg"
-                    className="h-12 px-7 rounded-full bg-[#0b2b4c] hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
+                    className="h-12 w-full sm:w-auto px-7 rounded-full bg-indigo-600 hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
                   >
                     <Link to="/editor">
                       <Sparkles className="size-4" />
@@ -216,7 +216,7 @@ export default function Hero() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="h-12 px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
+                    className="h-12 w-full sm:w-auto px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
                   >
                     <Link to="/products">
                       <span>Explore Products</span>
@@ -252,7 +252,7 @@ export default function Hero() {
             </div>
 
             {/* Right Composition: Floating Cards Stage */}
-            <div className="lg:col-span-6 xl:col-span-6 w-full flex flex-col justify-center items-center py-4 lg:py-0 overflow-visible">
+            <div className="lg:col-span-6 xl:col-span-6  w-full hidden lg:flex flex-col justify-center items-center py-4 lg:py-0 overflow-visible">
               <div className="relative w-85 h-92.5 sm:w-115 sm:h-120 md:w-135 md:h-137.5 lg:w-130 lg:h-135 xl:w-147.5 xl:h-140">
                 {/* Scaled Stage preserving exact Figma proportions and pixel placements */}
                 <div
@@ -538,6 +538,38 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
+            <div className="flex w-full flex-col items-center justify-center overflow-visible py-4 lg:py-0">
+              <div className="lg:hidden w-full max-w-xl mx-auto">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/90 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-[0_16px_42px_rgba(30,55,95,0.12)] dark:shadow-[0_14px_36px_rgba(0,0,0,0.5)]">
+                  <img
+                    src={designedImg}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                <div className="mt-3 grid grid-cols-5 gap-1.5 sm:gap-2">
+                  {quickTools.map((tool) => {
+                    const Icon = tool.icon;
+                    return (
+                      <Link
+                        key={tool.label}
+                        to={tool.href}
+                        aria-label={tool.label}
+                        className="flex min-h-12 items-center justify-center rounded-xl border border-[#e8edf3] dark:border-zinc-700/80 bg-white/90 dark:bg-zinc-900/90 text-[#173653] dark:text-zinc-100 shadow-sm"
+                      >
+                        <span
+                          className={`flex size-8 items-center justify-center rounded-[10px] ${tool.tone}`}
+                        >
+                          <Icon className="size-[15px]" />
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
 
@@ -597,11 +629,11 @@ export default function Hero() {
 
                   {/* Action CTA Buttons */}
                   <div className="pt-6 sm:pt-7">
-                    <div className="pt-2 flex flex-wrap items-center gap-4">
+                <div className="pt-2 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-3 md:gap-4">
                       <Button
                         asChild
                         size="lg"
-                        className="h-12 px-7 rounded-full bg-[#0b2b4c] hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
+                        className="h-12 w-full sm:w-auto px-7 rounded-full bg-indigo-600 hover:bg-[#123760] dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#04121c] text-white font-semibold font-jakarta text-base shadow-[0_14px_30px_rgba(11,43,76,0.18)] dark:shadow-[0_14px_30px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 border-0"
                       >
                         <Link to={slide.primaryCta.href}>
                           <Sparkles className="size-4" />
@@ -613,7 +645,7 @@ export default function Hero() {
                         asChild
                         variant="outline"
                         size="lg"
-                        className="h-12 px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
+                        className="h-12 w-full sm:w-auto px-7 rounded-full bg-white/90 dark:bg-zinc-900/90 hover:bg-white dark:hover:bg-zinc-800 border border-[#dce5ef] dark:border-zinc-800 text-[#173653] dark:text-zinc-100 font-semibold font-jakarta text-base shadow-[0_10px_24px_rgba(20,50,85,0.06)] dark:shadow-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c7d7e5] active:scale-[0.98] cursor-pointer inline-flex items-center gap-2 group"
                       >
                         <Link to={slide.secondaryCta.href}>
                           <LayoutTemplate className="size-4 text-[#4f8fd0] dark:text-emerald-400" />

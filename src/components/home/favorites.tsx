@@ -1,9 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/pagination";
 
 import { products } from "@/dummy/product";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -14,7 +15,7 @@ export default function Favorites() {
   return (
     <section
       aria-labelledby="favorites-heading"
-      className="section-container py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 select-none"
     >
       {/* Section Header */}
       <motion.div
@@ -49,7 +50,7 @@ export default function Favorites() {
 
       {/* Horizontal Image Cards */}
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         slidesPerView="auto"
         spaceBetween={24}
         loop
@@ -58,6 +59,11 @@ export default function Favorites() {
           delay: 3500,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
+        }}
+        pagination={{
+          clickable: true,
+          bulletClass: "favorites-pagination-bullet",
+          bulletActiveClass: "favorites-pagination-bullet-active",
         }}
         className="favorites-swiper w-full"
       >

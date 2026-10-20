@@ -11,7 +11,7 @@ export default function OfferBanner() {
   return (
     <section
       aria-labelledby="offer-banner-heading"
-      className="section-container py-14 sm:py-20 lg:py-24 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 24 }}

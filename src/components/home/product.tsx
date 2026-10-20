@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import { useMemo, useState } from "react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/pagination";
 
 import ProductCard from "@/components/shared/product-card";
 import { products, productTabs } from "@/dummy/product";
@@ -24,7 +25,7 @@ export default function Product() {
   return (
     <section
       aria-labelledby="curated-essentials-heading"
-      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-10 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 flex flex-col justify-start items-start gap-10 select-none"
     >
       {/* Section Header & Category Filter Tabs */}
       <motion.div
@@ -76,7 +77,7 @@ export default function Product() {
                 {isActive && (
                   <motion.div
                     layoutId="activeProductFilter"
-                    className="absolute inset-0 bg-[#0b2b4c] dark:bg-emerald-400 rounded-lg shadow-sm"
+                    className="absolute inset-0 bg-indigo-600 dark:bg-emerald-400 rounded-lg shadow-sm"
                     transition={{
                       type: "spring",
                       stiffness: 400,
@@ -94,7 +95,7 @@ export default function Product() {
       {/* Product Cards Horizontal Swiper */}
       <Swiper
         key={activeTab}
-        modules={[Autoplay]}
+        modules={[Autoplay, Pagination]}
         slidesPerView="auto"
         spaceBetween={16}
         loop={filteredProducts.length > 3}
@@ -104,14 +105,19 @@ export default function Product() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
+        pagination={{
+          clickable: true,
+          bulletClass: "product-pagination-bullet",
+          bulletActiveClass: "product-pagination-bullet-active",
+        }}
         className="product-swiper w-full"
       >
         {filteredProducts.map((product, idx) => (
-          <SwiperSlide key={product.id} className="!w-auto py-2">
+          <SwiperSlide key={product.id} className="w-auto! py-2">
             <ProductCard
               product={product}
               index={idx}
-              className="h-full w-[260px] shrink-0 sm:w-[280px] lg:w-[300px]"
+              className="h-full w-65 shrink-0 sm:w-70 lg:w-75"
             />
           </SwiperSlide>
         ))}

@@ -1,0 +1,1 @@
+Check your added css dot pagination mergin but its not working.

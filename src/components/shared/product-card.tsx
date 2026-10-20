@@ -151,13 +151,25 @@ export default function ProductCard({
             type="button"
             onClick={handleQuickCustomize}
             className={cn(
-              "rounded-lg bg-[#0b2b4c] px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white",
-              "hover:bg-[#174a77] active:scale-95",
+              "hidden md:block rounded-lg bg-indigo-600 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white",
+              "hover:bg-indigo-500 active:scale-95",
               "dark:bg-emerald-400 dark:text-[#04121c] dark:hover:bg-emerald-300",
               "transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 font-jakarta leading-4"
             )}
           >
             Quick Customize
+          </button>
+          <button
+            type="button"
+            onClick={handleQuickCustomize}
+            className={cn(
+              "md:hidden rounded-lg bg-indigo-600 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white",
+              "hover:bg-indigo-500 active:scale-95",
+              "dark:bg-emerald-400 dark:text-[#04121c] dark:hover:bg-emerald-300",
+              "transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 font-jakarta leading-4"
+            )}
+          >
+            Quick C...
           </button>
         </div>
       </div>

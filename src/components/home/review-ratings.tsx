@@ -199,7 +199,7 @@ export default function ReviewRatings() {
       aria-labelledby="community-showcase-heading"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
+      className="section-container py-10 sm:py-14 lg:py-16 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
     >
       {/* Section Header */}
       <motion.div

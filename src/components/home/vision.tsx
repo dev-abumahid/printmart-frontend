@@ -10,7 +10,7 @@ export default function Vision() {
   return (
     <section
       aria-label="Why Choose PrintMart"
-      className="w-full py-12 sm:py-16 lg:py-20 border-t border-gray-100 dark:border-zinc-800 select-none"
+      className="w-full py-8 sm:py-11 lg:py-14 border-t border-gray-100 dark:border-zinc-800 select-none"
     >
       <div className="section-container">
         {/* TRUST STRIP */}

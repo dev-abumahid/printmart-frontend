@@ -2,9 +2,11 @@ import { ArrowRight, ChevronRight, Layers } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import type { Swiper as SwiperClass } from "swiper";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/pagination";
 
 import { services, type ServiceItem } from "@/dummy/services";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -70,7 +72,7 @@ export default function Services() {
   return (
     <section
       aria-labelledby="services-heading"
-      className="section-container py-14 sm:py-20 lg:py-2 select-none"
+      className="section-container py-10 sm:py-14 lg:py-16 select-none"
     >
       <motion.div
         initial={prefersReduced ? false : { opacity: 0, y: 20 }}
@@ -105,12 +107,17 @@ export default function Services() {
       {/* Horizontal Services Carousel */}
       <div className="relative">
         <Swiper
-          modules={[]}
+          modules={[Pagination]}
           slidesPerView="auto"
           spaceBetween={24}
           loop
           speed={650}
           onSwiper={setSwiper}
+          pagination={{
+            clickable: true,
+            bulletClass: "services-pagination-bullet",
+            bulletActiveClass: "services-pagination-bullet-active",
+          }}
           className="services-swiper w-full"
         >
           {services.map((service) => (

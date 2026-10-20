@@ -74,6 +74,7 @@ export default function LittleThings() {
   const prefersReduced = useReducedMotion();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
+  const [activeDot, setActiveDot] = useState(0);
 
   // Drag-to-scroll state
   const isDraggingRef = useRef(false);
@@ -136,12 +137,44 @@ export default function LittleThings() {
     setIsPaused(false);
   };
 
+  const getChildScrollLeft = (el: HTMLDivElement, child: HTMLElement) =>
+    child.getBoundingClientRect().left -
+    el.getBoundingClientRect().left +
+    el.scrollLeft;
+
+  const handleScroll = () => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    const children = Array.from(el.children) as HTMLElement[];
+    let nextActive = 0;
+
+    children.forEach((child, index) => {
+      if (el.scrollLeft >= getChildScrollLeft(el, child) - 12) {
+        nextActive = index;
+      }
+    });
+
+    setActiveDot(nextActive);
+  };
+
+  const scrollToSlide = (index: number) => {
+    const el = scrollContainerRef.current;
+    const child = el?.children[index] as HTMLElement | undefined;
+    if (!el || !child) return;
+
+    el.scrollTo({
+      left: getChildScrollLeft(el, child),
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       aria-labelledby="little-things-heading"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="section-container py-14 sm:py-20 lg:py-24 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
+      className="section-container py-10 sm:py-14 lg:py-16 flex flex-col justify-start items-start gap-8 sm:gap-10 select-none overflow-hidden"
     >
       {/* Section Header with Navigation Controls */}
       <motion.div
@@ -178,8 +211,9 @@ export default function LittleThings() {
         onMouseUp={handleMouseUpOrLeave}
         onTouchStart={() => setIsPaused(true)}
         onTouchEnd={() => setIsPaused(false)}
+        onScroll={handleScroll}
         className={cn(
-          "w-full flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-1",
+          "w-full flex gap-5 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pt-1",
           "scrollbar-none [&::-webkit-scrollbar]:hidden",
           "cursor-grab active:cursor-grabbing select-none",
         )}
@@ -187,6 +221,33 @@ export default function LittleThings() {
         {littleThings.map((item, idx) => (
           <LittleThingCard key={item.id} item={item} index={idx} />
         ))}
+      </div>
+
+      {/* Mobile Pagination Dots */}
+      <div
+        className="flex w-full items-center justify-center gap-1.5 md:hidden"
+        role="tablist"
+        aria-label="Holiday essentials slides"
+      >
+        {littleThings.map((item, index) => {
+          const isActive = activeDot === index;
+          return (
+            <button
+              key={item.id}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              aria-label={`Go to ${item.title}`}
+              onClick={() => scrollToSlide(index)}
+              className={cn(
+                "h-1.5 rounded-full transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500",
+                isActive
+                  ? "w-5 bg-indigo-600 dark:bg-indigo-400"
+                  : "w-1.5 bg-gray-300 hover:bg-gray-400 dark:bg-zinc-700 dark:hover:bg-zinc-600",
+              )}
+            />
+          );
+        })}
       </div>
     </section>
   );
